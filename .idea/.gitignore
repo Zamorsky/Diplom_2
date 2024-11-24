@@ -1,3 +1,30 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse m2e generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Исключить папки и файлы проекта
+.idea/      # Конфигурации IDE, такие как IntelliJ IDEA
+.build/     # Сборочные артефакты
+.target/    # Каталоги для сборки Maven или других инструментов
+
+# Общие системные файлы
+*.iml       # Файлы модулей IntelliJ IDEA
+*.log       # Логи
+
+# Исключить операционные системные файлы
+.DS_Store   # macOS
+Thumbs.db   # Windows
