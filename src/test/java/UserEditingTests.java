@@ -1,17 +1,15 @@
-import clients.UserClient;
 import generators.UserGen;
 import io.qameta.allure.Description;
-
-import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import models.User;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import utils.SharedSteps;
+import utils.UserClient;
 
-import static org.hamcrest.Matchers.*;
-
+import static org.hamcrest.Matchers.equalTo;
 
 public class UserEditingTests {
 
@@ -34,31 +32,33 @@ public class UserEditingTests {
         // Отправляем запрос на создание пользователя
         Response response = userClient.createUser(user);
 
-        checkStatusCode200(response);
-        checkBodyContainsSuccess(response);
+        // Проверяем, что ответ от сервера успешный (статус 200)
+        SharedSteps.checkResponseStatusCode(response, 200);
+        SharedSteps.checkBodyContainsSuccess(response);
 
-        String accessToken = getAccessToken(response); //получаем токен авторизации
+        // Получаем токен авторизации после создания пользователя
+        String accessToken = SharedSteps.getAccessToken(response);
 
-        //меняем имя у сгенерированного юзера для запроса
+        // Генерация нового имени для пользователя для изменения
         User editedDataUser = new User(user.getEmail(), user.getPassword(), UserGen.generateRandomUser().getName());
 
-        //меняем имя у сгенерированного юзера на сервере с помощью запроса updateUser
+        // Отправляем запрос на обновление данных пользователя (изменение имени)
         Response responseUpdate = userClient.updateUser(editedDataUser, accessToken);
         responseUpdate.then()
                 .statusCode(200)
                 .body("user.email", equalTo(editedDataUser.getEmail()))
-                .body("user.name", equalTo(editedDataUser.getName()))
+                .body("user.name", equalTo(editedDataUser.getName()))  // Проверяем, что имя обновилось
                 .body("success", equalTo(true));
-        //нужно проверить возможность логина под новыми данными
+
+        // Проверяем возможность логина с новыми данными (проверка корректности изменений)
         Response loginResponse = userClient.loginUser(editedDataUser);
         loginResponse.then()
                 .body("success", equalTo(true)) // Поле success = true
                 .body("user.email", equalTo(editedDataUser.getEmail())) // Email соответствует
                 .body("user.name", equalTo(editedDataUser.getName())); // Имя соответствует
 
-
-        user.setName(editedDataUser.getName()); //возвращаем новый name исходному юзеру, чтобы он мог удалиться
-
+        // Возвращаем имя пользователю, чтобы он мог быть удален после теста
+        user.setName(editedDataUser.getName());
     }
 
     @Test
@@ -68,30 +68,31 @@ public class UserEditingTests {
         // Отправляем запрос на создание пользователя
         Response response = userClient.createUser(user);
 
-        checkStatusCode200(response);
-        checkBodyContainsSuccess(response);
+        SharedSteps.checkResponseStatusCode(response, 200);
+        SharedSteps.checkBodyContainsSuccess(response);
 
-        String accessToken = getAccessToken(response); //получаем токен авторизации
+        String accessToken = SharedSteps.getAccessToken(response); //получаем токен авторизации
 
-        //меняем почту у сгенерированного юзера для запроса
+        // Генерация новой почты для изменения
         User editedDataUser = new User(UserGen.generateRandomUser().getEmail(), user.getPassword(), user.getName());
 
-        //меняем почту у сгенерированного юзера на сервере с помощью запроса updateUser
+        // Отправляем запрос на обновление данных пользователя (изменение почты)
         Response responseUpdate = userClient.updateUser(editedDataUser, accessToken);
         responseUpdate.then()
                 .statusCode(200)
                 .body("user.email", equalTo(editedDataUser.getEmail()))
                 .body("user.name", equalTo(editedDataUser.getName()))
                 .body("success", equalTo(true));
-        //нужно проверить возможность логина под новыми данными
+
+        // Проверка возможности логина с новой почтой
         Response loginResponse = userClient.loginUser(editedDataUser);
         loginResponse.then()
                 .body("success", equalTo(true)) // Поле success = true
                 .body("user.email", equalTo(editedDataUser.getEmail())) // Email соответствует
                 .body("user.name", equalTo(editedDataUser.getName())); // Имя соответствует
 
-
-        user.setEmail(editedDataUser.getEmail()); //возвращаем новый email исходному юзеру, чтобы он мог удалиться
+        // Возвращаем email пользователю, чтобы он мог быть удален после теста
+        user.setEmail(editedDataUser.getEmail());
     }
 
     @Test
@@ -100,20 +101,21 @@ public class UserEditingTests {
     public void updateToExistingEmailWithAuthUsersTest() {
         // Отправляем запрос на создание первого пользователя
         Response response = userClient.createUser(user);
-        //создаем второго юзера, чтобы у нас появился занятый email
+
+        // Создаем второго пользователя с занятым email
         User user2 = UserGen.generateRandomUser();
         userClient.createUser(user2);
 
-        String accessToken = getAccessToken(response); //получаем токен авторизации первого пользователя
+        String accessToken = SharedSteps.getAccessToken(response); //получаем токен авторизации первого пользователя
 
-        //меняем почту у сгенерированного юзера для запроса
+        // Пытаемся изменить почту первого пользователя на почту второго
         User editedDataUser = new User(user2.getEmail(), user.getPassword(), user.getName());
 
-        //меняем почту у перового юзера на почту второго на сервере с помощью запроса updateUser
+        // Отправляем запрос на обновление данных пользователя (почта)
         Response responseUpdate = userClient.updateUser(editedDataUser, accessToken);
         responseUpdate.then()
-                .statusCode(403)
-                .body("message", equalTo("User with such email already exists"))
+                .statusCode(403) // Ожидаем статус 403 (Forbidden)
+                .body("message", equalTo("User with such email already exists")) // Сообщение об ошибке
                 .body("success", equalTo(false));
     }
 
@@ -124,15 +126,15 @@ public class UserEditingTests {
         // Отправляем запрос на создание пользователя
         Response response = userClient.createUser(user);
 
-        checkStatusCode200(response);
-        checkBodyContainsSuccess(response);
+        SharedSteps.checkResponseStatusCode(response, 200);
+        SharedSteps.checkBodyContainsSuccess(response);
 
-        String accessToken = getAccessToken(response); //получаем токен авторизации
+        String accessToken = SharedSteps.getAccessToken(response); //получаем токен авторизации
 
-        //меняем пароль у сгенерированного юзера для запроса
+        // Генерация нового пароля для изменения
         User editedDataUser = new User(user.getEmail(), UserGen.generateRandomUser().getPassword(), user.getName());
 
-        //меняем пароль у сгенерированного юзера на сервере с помощью запроса updateUser
+        // Отправляем запрос на обновление данных пользователя (пароль)
         Response responseUpdate = userClient.updateUser(editedDataUser, accessToken);
         responseUpdate.then()
                 .statusCode(200)
@@ -140,15 +142,15 @@ public class UserEditingTests {
                 .body("user.name", equalTo(editedDataUser.getName()))
                 .body("success", equalTo(true));
 
-        //нужно проверить возможность логина под новыми данными
+        // Проверка возможности логина с новым паролем
         Response loginResponse = userClient.loginUser(editedDataUser);
         loginResponse.then()
                 .body("success", equalTo(true)) // Поле success = true
                 .body("user.email", equalTo(editedDataUser.getEmail())) // Email соответствует
                 .body("user.name", equalTo(editedDataUser.getName())); // Имя соответствует
 
-        user.setPassword(editedDataUser.getPassword()); //возвращаем новый пароль исходному юзеру, чтобы он мог удалиться в After
-
+        // Возвращаем пароль пользователю, чтобы он мог быть удален после теста
+        user.setPassword(editedDataUser.getPassword());
     }
 
     @Test
@@ -157,69 +159,29 @@ public class UserEditingTests {
     public void updateDataWithoutAuthUsersTest() {
         // Отправляем запрос на создание пользователя
         Response response = userClient.createUser(user);
-        checkStatusCode200(response);
-        checkBodyContainsSuccess(response);
-        //меняем имя у сгенерированного юзера для запроса
-        User editedDataUser = new User(user.getEmail(), user.getPassword(), UserGen.generateRandomUser().getName());
-        //меняем имя у сгенерированного юзера на сервере с помощью запроса Patch
+        SharedSteps.checkResponseStatusCode(response, 200);
+        SharedSteps.checkBodyContainsSuccess(response);
 
+        // Пытаемся изменить данные пользователя без авторизации
+        User editedDataUser = new User(user.getEmail(), user.getPassword(), UserGen.generateRandomUser().getName());
         Response responseUpdate = userClient.updateWithoutAuthUser(editedDataUser);
 
         responseUpdate.then()
-                .statusCode(401) //401 Unauthorized
-                .body("message", equalTo("You should be authorised"))
+                .statusCode(401) // Ожидаем статус 401 (Unauthorized)
+                .body("message", equalTo("You should be authorised")) // Сообщение об ошибке
                 .body("success", equalTo(false));
     }
-
-
 
     @After
     public void tearDown() {
         // Удаляем пользователя после теста, если он был создан
-        if (user != null ) {
+        if (user != null) {
             Response responseLogin = userClient.loginUser(user);
-            String accessToken = getAccessToken(responseLogin); // Логинимся для получения токена
+            String accessToken = SharedSteps.getAccessToken(responseLogin); // Логинимся для получения токена
             Response responseDelete = userClient.deleteUser(accessToken); // Удаляем пользователя
-            checkStatusCode202(responseDelete);
-            checkBodyContainsSuccess(responseDelete);
-            responseDelete.then().body("message", equalTo("User successfully removed")); // Проверка, что список заказов не пуст
+            SharedSteps.checkResponseStatusCode(responseDelete, 202); // Проверяем, что удаление прошло успешно
+            SharedSteps.checkBodyContainsSuccess(responseDelete);
+            responseDelete.then().body("message", equalTo("User successfully removed"));
         }
     }
-
-
-
-    @Step("Проверяем, что ответ с кодом 200")
-    public void checkStatusCode200(Response response) {
-        response.then()
-                .statusCode(200); // Ожидаем статус-код 200
-    }
-
-    @Step("Проверяем, что ответ с кодом 202")
-    public void checkStatusCode202(Response response) {
-        response.then()
-                .statusCode(202); // Ожидаем статус-код 200
-    }
-
-
-    @Step("Проверяем, что в ответе есть success")
-    public void checkBodyContainsSuccess(Response response) {
-        response.then()
-                .body("success", equalTo(true)); // Проверка, что список заказов не пуст
-    }
-
-    @Step("Получить accessToken")
-    public String getAccessToken(Response response) {
-        String bearerToken = response.then()
-                .contentType("application/json") // Указываем ожидаемый тип ответа
-                .extract()
-                .path("accessToken"); // Извлекаем значение accessToken
-
-        // Убираем префикс "Bearer ", если он есть
-        if (bearerToken.startsWith("Bearer ")) {
-            return bearerToken.substring(7); // Возвращаем токен без "Bearer "
-        }
-        return bearerToken; // Если префикса нет, возвращаем токен как есть
-    }
-
-
 }

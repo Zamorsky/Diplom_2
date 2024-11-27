@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca40b76b-0078-453a-a199-715926e3d21f" name="Changes" comment="сделаны все проверки по юзерам">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/clients/BaseClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/clients/OrderClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/clients/UserClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/generators/OrderGen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/generators/UserGen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/IngredientsGettTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OrderCreatingTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserAuthTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserCreatingTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserEditingTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/SharedSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clients/BaseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BaseClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clients/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/OrderClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clients/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/generators/OrderGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generators/OrderGen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/generators/UserGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generators/UserGen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IngredientsGettTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IngredientsGetTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrderCreatingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrderCreatingTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserAuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserAuthTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserCreatingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserCreatingTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserEditingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserEditingTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +76,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.IngredientsGetTests.executor": "Run",
+    "JUnit.OrderCreatingTests.createOrderWithIngredientsTest.executor": "Run",
+    "JUnit.OrderCreatingTests.executor": "Run",
     "JUnit.UserAuthTests.executor": "Run",
     "JUnit.UserCreatingTests.executor": "Run",
     "JUnit.UserEditingTests.executor": "Run",
@@ -92,7 +92,8 @@
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -107,7 +108,41 @@
       <command value="mvn allure:serve" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.IngredientsGetTests">
+    <configuration name="IngredientsGetTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.IngredientsGetTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderCreatingTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderCreatingTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderCreatingTests.createOrderWithIngredientsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderCreatingTests" />
+      <option name="METHOD_NAME" value="createOrderWithIngredientsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="java in Diplom_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="TEST_OBJECT" value="directory" />
@@ -118,6 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IngredientsGetTests" />
+        <item itemvalue="JUnit.OrderCreatingTests.createOrderWithIngredientsTest" />
+        <item itemvalue="JUnit.OrderCreatingTests" />
         <item itemvalue="JUnit.java in Diplom_2" />
       </list>
     </recent_temporary>
@@ -155,7 +193,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732473451831</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="сделаны все проверки по юзерам">
+      <option name="closed" value="true" />
+      <created>1732702964696</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732702964696</updated>
+    </task>
+    <task id="LOCAL-00005" summary="сделаны все проверки по юзерам">
+      <option name="closed" value="true" />
+      <created>1732703206425</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732703206425</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

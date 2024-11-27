@@ -1,4 +1,4 @@
-package clients;
+package utils;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;

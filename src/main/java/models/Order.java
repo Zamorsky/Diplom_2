@@ -1,16 +1,16 @@
 package models;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.util.List;
 
-@AllArgsConstructor
-
+/**
+ * Класс Order описывает заказ с ингредиентами.
+ */
+@Data // Генерирует геттеры, сеттеры, equals, hashCode и toString
+@AllArgsConstructor // Генерирует конструктор с аргументами для всех полей
+@NoArgsConstructor // Генерирует конструктор без аргументов
 public class Order {
-    private String [] ingredients;
-
-    public String[] getIngredients() {
-        return ingredients;
-    }
-    public void setIngredients(String[] ingredients) {
-        this.ingredients = ingredients;
-    }
+    private List<String> ingredients; // Список идентификаторов ингредиентов
 }

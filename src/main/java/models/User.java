@@ -1,14 +1,10 @@
 package models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 
-
-@Getter
-@Setter
-@NoArgsConstructor
+@Data // Генерирует геттеры, сеттеры, equals, hashCode и toString// Генерирует конструктор с аргументами для всех полей
+@NoArgsConstructor // Генерирует конструктор без аргументов
 
 public class User {
 
