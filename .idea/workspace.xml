@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca40b76b-0078-453a-a199-715926e3d21f" name="Changes" comment="сделал все проверки по заказам и завершил проект">
+      <change afterPath="$PROJECT_DIR$/target/allure-results/07b30837-4e37-46ee-88b8-2d8179b882ec-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/134bcfb1-2f1c-4b22-a173-e8771ebf3e3a-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/2657c958-64d5-4263-8f4b-3ff2048e4ead-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/2d29b1d6-b1b3-4963-a73b-445fbb3c4072-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/2ecb275f-f340-4bad-bf2d-34313de65b95-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/309841d2-7a97-41ed-b3e6-0a6f5613ec4f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/3332b8ca-d955-4acf-8687-2c99a538e304-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/3d96fb03-129a-4a8b-88ca-628e57a8c0c3-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/4c43229d-7e83-42eb-ae19-f5bc05bd91ba-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/5f0e825d-073f-45da-8047-46963a43bdfa-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/785ab6ba-3e25-468c-95df-9302dda29890-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/82562ce4-3466-4256-882d-fc72ef35e7c6-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/8b3c49f1-7418-4dfb-a30a-c04d9a6bfd6c-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/989befca-05e9-42e5-b930-47e3f53aeac3-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/allure.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/b0255fce-82e9-4f08-a7be-87a793117f8c-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/b068c65e-2d04-4023-9ae8-a65e8bd84921-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/b84096ea-bb95-4bea-91ca-5e226514c7d6-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/bbe8c15d-ab74-402a-81f6-e9ec74013228-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/c843541f-5330-4c22-a4ac-8473620acb28-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/executor.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/fad659e7-e9e2-4c5d-a706-b76896c9629d-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="develop2" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Zamorsky&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Zamorsky/Diplom_2.git&quot;,
+    &quot;accountId&quot;: &quot;1da40871-4a68-4043-b7f2-811bd3dcae7e&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2pJ6UABwpIehoCsbh9rBEnJbpVR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.IngredientsGetTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderCreatingTests.createOrderWithIngredientsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderCreatingTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserAuthTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserCreatingTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserEditingTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in Diplom_2.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Diplom_2 [allure:serve].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Diplom_2 [clean,test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#1 on develop2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="allure serve target/surefire-reports/" />
+      <command value="mvn clean test" />
+      <command value="mvn allure:serve" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.IngredientsGetTests">
+    <configuration name="IngredientsGetTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.IngredientsGetTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderCreatingTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderCreatingTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderCreatingTests.createOrderWithIngredientsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderCreatingTests" />
+      <option name="METHOD_NAME" value="createOrderWithIngredientsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in Diplom_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.IngredientsGetTests" />
+        <item itemvalue="JUnit.OrderCreatingTests.createOrderWithIngredientsTest" />
+        <item itemvalue="JUnit.OrderCreatingTests" />
+        <item itemvalue="JUnit.java in Diplom_2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca40b76b-0078-453a-a199-715926e3d21f" name="Changes" comment="" />
+      <created>1732471852170</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732471852170</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1732472954234</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732472954234</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1732473297899</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732473297899</updated>
+    </task>
+    <task id="LOCAL-00003" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1732473451831</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732473451831</updated>
+    </task>
+    <task id="LOCAL-00004" summary="сделаны все проверки по юзерам">
+      <option name="closed" value="true" />
+      <created>1732702964696</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732702964696</updated>
+    </task>
+    <task id="LOCAL-00005" summary="сделаны все проверки по юзерам">
+      <option name="closed" value="true" />
+      <created>1732703206425</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732703206425</updated>
+    </task>
+    <task id="LOCAL-00006" summary="сделал все проверки по заказам и завершил проект">
+      <option name="closed" value="true" />
+      <created>1732730236278</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732730236278</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="сделаны все проверки по юзерам" />
+    <MESSAGE value="сделал все проверки по заказам и завершил проект" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделал все проверки по заказам и завершил проект" />
+  </component>
+</project>
